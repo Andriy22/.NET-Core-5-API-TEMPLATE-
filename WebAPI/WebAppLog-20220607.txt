@@ -1,0 +1,31 @@
+2022-06-07 20:29:03.138 +03:00 [INF] Entity Framework Core 5.0.17 initialized 'DBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=WebAPI 
+2022-06-07 20:29:03.287 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-06-07 20:29:03.301 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-06-07 20:29:03.310 +03:00 [INF] User profile is available. Using 'C:\Users\istep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-06-07 20:29:03.365 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-07 20:29:03.365 +03:00 [INF] Hosting environment: Development
+2022-06-07 20:29:03.365 +03:00 [INF] Content root path: C:\Users\istep\source\repos\Backend\WebAPI
+2022-06-07 20:29:03.375 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44332/swagger/index.html - -
+2022-06-07 20:29:03.468 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44332/swagger/index.html - - - 200 - text/html;charset=utf-8 94.2085ms
+2022-06-07 20:29:03.504 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44332/_framework/aspnetcore-browser-refresh.js - -
+2022-06-07 20:29:03.507 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44332/_framework/aspnetcore-browser-refresh.js - - - 200 11982 application/javascript;+charset=utf-8 2.2749ms
+2022-06-07 20:29:03.517 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44332/_vs/browserLink - -
+2022-06-07 20:29:03.538 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44332/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 21.3970ms
+2022-06-07 20:29:03.626 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44332/swagger/v1/swagger.json - -
+2022-06-07 20:29:03.664 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44332/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 37.9408ms

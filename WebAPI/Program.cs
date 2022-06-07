@@ -14,7 +14,7 @@ namespace WebAPI
         {
             Log.Logger = new LoggerConfiguration()
                .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
-               .WriteTo.File("NotesWebAppLog-.txt", rollingInterval:
+               .WriteTo.File("WebAppLog-.txt", rollingInterval:
                    RollingInterval.Day)
                .CreateLogger();
 
